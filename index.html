@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+     <header class="header">
+        <div class="container">
+            <div class="logo"><a href="#">Clotify</a></div>
+            <div class="row align-items-center justify-content-between">
+
+                <button type="button" class="nav-toggler">
+                    <span></span>
+                </button>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">blog</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                
+            </div>
+        </div>
+    </header>
+    <div class="cart"><i class='bx bxs-cart'> My Cart:</i>
+        <span id="number"></span>
+    </div>
+    <div class="product">
+        <div class="pimg">
+            <img src="./images/image.jpg">
+            <span></span>
+        </div>
+        <div class="dis">
+            <h1>Men's Black Shirt</h1>
+            <span>MRP ₹544  </span>
+            <span class="orignal-price">₹1649</span>
+            <span>(67% OFF)</span>
+            <div class="quantity">
+                <button class="minus" >-</button>
+                <input type="text" value="1" class="num">
+                <button class="plus">+</button>
+            </div>
+            <div class="addcart">
+                <button onclick="addToCart()" class="addc">Add to cart</button>
+            </div>
+            <div class="lor">
+                <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus similique mollitia quasi recusandae sed perferendis dolor explicabo rem magnam ullam, quaerat esse cupiditate velit necessitatibus aliquam? Minus, harum. Ullam, sit.</span>
+            </div>
+        </div>
+    </div>
+    
+    <section>
+		<div class="item">
+			<img src="./images/image2.jpg">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, quo, modi ea voluptas tempora vero cumque incidunt eum animi</p>
+			<h6>$345.89</h6>
+			<button class="crtbtn">Add-cart</button>
+			
+		</div>
+		<div class="item">
+			<img src="./images/image3.jpg">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, quo, modi ea voluptas tempora vero cumque incidunt eum animi</p>
+			<h6>$345.89</h6>
+			<button class="crtbtn">Add-cart</button>
+		</div>
+		<div class="item">
+			<img src="./images/image4.jpg">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, quo, modi ea voluptas tempora vero cumque incidunt eum animi</p>
+			<h6>$345.89</h6>
+			<button class="crtbtn">Add-cart</button>
+		</div>
+		<div class="item">
+			<img src="./images/image5.jpg">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, quo, modi ea voluptas tempora vero cumque incidunt eum animi</p>
+			<h6>$345.89</h6>
+			<button class="crtbtn">Add-cart</button>
+		</div>
+        <div class="item">
+			<img src="./images/image2.jpg">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, quo, modi ea voluptas tempora vero cumque incidunt eum animi</p>
+			<h6>$345.89</h6>
+			<button class="crtbtn">Add-cart</button>
+			
+		</div>
+		<div class="item">
+			<img src="./images/image3.jpg">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, quo, modi ea voluptas tempora vero cumque incidunt eum animi</p>
+			<h6>$345.89</h6>
+			<button class="crtbtn">Add-cart</button>
+		</div>
+		<div class="item">
+			<img src="./images/image4.jpg">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, quo, modi ea voluptas tempora vero cumque incidunt eum animi</p>
+			<h6>$345.89</h6>
+			<button class="crtbtn">Add-cart</button>
+		</div>
+		<div class="item">
+			<img src="./images/image5.jpg">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, quo, modi ea voluptas tempora vero cumque incidunt eum animi</p>
+			<h6>$345.89</h6>
+			<button class="crtbtn">Add-cart</button>
+		</div>
+	</section>
+    <div class="sticky hidd">
+        <div class="simg">
+            <img src="./images/image.jpg">
+            <h1>Men's Black Shirt </h1>
+            <span>MRP ₹544  </span>
+        </div>
+        <div class="sticky-dis">
+            <div class="quantity">
+                <button class="minus" onclick="dec()">-</button>
+                <input type="text" value="1" class="num2">
+                <button class="plus" onclick="inc()">+</button>
+            </div>
+            <div class="sticky-addcart">
+                <button onclick="addToCart()" class="addc">Add to cart</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+:root{
+    --color-1: black;
+}
+*{
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+}
+ul{
+	list-style: none;
+}
+a{
+    display:block;
+    color:white;   
+    text-transform: capitalize;
+    text-align: right;
+    font-size: 1.75rem;
+    font-weight: 600;
+	text-decoration: none;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+	max-width: 1370px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.align-items-center{
+	align-items: center;
+}
+.justify-content-between{
+	justify-content: space-between;
+}
+/*header*/
+.header{
+	position: sticky;
+	top:0;
+	z-index:10;
+	background-color: var(--color-1);
+	line-height: 1.5;
+	box-shadow: 0 0 10px 0 rgba(133, 133, 133, 0.3);
+}
+.header .logo a{
+	font-size: 30px;
+	font-weight: 200;
+	color: #ffffff;
+	text-transform: capitalize;
+}
+.header .nav ul li{
+	display: inline-block;
+	margin-left: 50px;
+}
+.header .nav ul li a{
+	display: block;
+	font-size: 1.25rem;
+	font-weight: 400;letter-spacing: 1.5px;
+	text-transform: capitalize;
+	color: #ffffff;
+	padding: 10px 10px;
+	transition: all 0.1s ease;
+}
+.header .nav ul li a.active,
+.header .nav ul li a:hover{
+	background-color: #28282B;
+}
+.nav-toggler{
+	height: 34px;
+	width: 44px;
+	background-color: #ffffff;
+	border-radius: 4px;
+	cursor: pointer;
+	border:none;
+	display: none;
+	margin-right: 15px;
+}
+.nav-toggler:focus{
+	outline: none;
+	
+}
+.nav-toggler span{
+    height: 2px;
+    width: 20px;
+    background-color: var(--color-1);
+    display: block;
+    margin:auto;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.nav-toggler.active span{
+	background-color: transparent;
+}
+.nav-toggler span::before,
+.nav-toggler span::after{
+	content: '';
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-1);
+	transition: all 0.3s ease;
+}
+.nav-toggler span::before{
+	transform: translateY(-6px);
+}
+.nav-toggler.active span::before{
+	transform: rotate(45deg);
+}
+.nav-toggler span::after{
+	transform: translateY(6px);
+}
+.nav-toggler.active span::after{
+	transform: rotate(135deg);
+}
+.cart{
+    text-align: right;
+    margin-right:30px;
+    padding:10px;
+    font-size: 40px;
+}
+#number{
+    font-size: 2rem;
+}
+.quantity{
+    margin-top: 20px;
+}
+.quantity input{
+    width: 150px;
+    height: 44px;
+    border:1px solid #ddd;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 20px;
+    padding:5px;
+}
+.quantity .minus,.plus{
+    width:40px;
+    height:44px;
+    background:#f2f2f2;
+    border-radius:4px;
+    padding:8px 5px 8px 5px;
+    border:1px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+.product{
+    padding-top: 30px;
+    padding-bottom: 60px;
+    display:flex;
+    justify-content: space-evenly;
+    /* flex-wrap: wrap-reverse; */
+}
+.dis{
+    width:50%;
+    font-size:2rem;
+    font-weight:600;
+    text-align:left;
+    color:black;
+    text-transform: capitalize;
+    display:inline;
+    flex-direction: column;
+    margin:50px;
+}
+.dis h1{
+    font-weight:400;
+    text-align: left;
+}
+.dis span{
+    color:rgb(6, 123, 108);
+	letter-spacing: 1px;
+    font-weight: 300;
+    font-size:1.5rem;
+}
+.orignal-price{
+    text-decoration: line-through;
+}
+.dis .logos{
+	margin-top:70px;
+	display:flex;
+}
+.dis .logos a{
+	margin:0 70px 0 0;
+}
+
+.product .pimg{
+    padding:20px;
+    margin-left:50px;
+    border-radius: 10px;
+	width:40%;
+	height:600px;
+}
+.pimg img{
+    width:100%;
+    height:100%;
+}
+.addc{
+    margin-top: 40px;
+    padding:10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.sticky{
+    z-index: 9;
+    position: fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(193, 192, 192);
+}
+.hidd{
+    display:none;
+}
+.simg{
+width:600px;
+height:100px;
+display:flex;
+align-items: center;
+}
+.simg span{
+    margin-left: 30px;
+    font-size:1.25rem;
+}
+.simg img{
+    width:100px;
+    height:80px;
+    margin: 0 30px;
+}
+.sticky-dis{
+    width:50%;
+    align-items: center;
+    display:flex;
+    justify-content:space-evenly;
+}
+.sticky-addcart{
+align-items: center;
+margin:0px 40px;
+padding-bottom: 20px;
+}
+
+section{
+    display:flex;
+    flex-wrap: wrap;
+    margin: 100px auto;
+    width: 90%;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+section div{
+    width: 22%;
+    height: 93%;
+    background:#f5f5f5;
+    padding: 1%;
+    position: relative;
+}
+img{
+    width: 300px;
+    height: 186px;
+}
+
+p{
+    margin: 5px;
+}
+h6{
+    width: 50px;
+    padding: 5px;
+    margin: 10px;
+    font-size: 15px;
+}
+.crtbtn{
+    padding: 5px;
+    background: rgb(5, 5, 5);
+    border: none;
+    outline: none;
+    font-weight: bold;
+    color: #fafafa;
+    cursor: pointer;
+}
+@media(max-width:991px){
+    .product{
+        display:block;
+        text-align: center;
+    }
+    .product .pimg{
+        width:80%;
+        margin:auto;
+    }
+    .pimg img{
+        width:100%;
+    }
+	.nav-toggler{
+		display: block;
+	}
+	.header .nav{
+		width: 100%;
+		padding:0;
+	 margin-bottom: 10px;
+		max-height: 0px;
+		overflow: hidden;
+		visibility: hidden;
+		transition: all 0.5s ease-in-out;
+	}
+	.header .nav.open{
+		visibility: visible;
+	 max-height: 100%;
+	 transition: all 0.5s ease-out;
+	}
+	.header .nav ul{
+		padding:12px 15px 0;
+		margin-top: 12px;
+		border-top:1px solid rgba(255,255,255,0.2);
+	}
+	.header .nav ul li{
+		display: block;
+		margin:0;
+	}
+    .dis{
+        width:20%;
+        font-size:1rem;
+        font-weight:400;
+        text-align:left;
+        color:black;
+        text-transform: capitalize;
+        display:inline;
+        flex-direction: column;
+        margin:100px;
+    }
+    .dis h1{
+        width:60%;
+        margin:auto;
+        font-weight:400;
+        text-align: left;
+    }
+    .dis span{
+        color:rgb(6, 123, 108);
+        letter-spacing: 1px;
+        font-weight: 300;
+        font-size:1.5rem;
+    }
+    section{
+        width: 80%;
+        height: 400px;
+        display: block;
+    }	
+    section div{
+        width: 100%;
+        height: 93%;
+        background:#f5f5f5;
+        padding: 1%;
+        position: relative;
+        margin:20px auto;
+    }
+    img{
+        width: 100%;
+        height: 220px;
+    }
+    .addcart,.lor{
+        display: flex;
+        justify-content: center;
+        margin:20px auto;
+    }
+    .quantity{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        margin:20px;
+    }
+    .lor span{
+        font-size: 1.25rem;
+        padding:10px;
+    }
+    .addc{
+        width:100px;
+        margin:10px auto;
+    }
+    .simg h1{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .sticky-dis .quantity input{
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+    }
+    .sticky-dis .quantity .minus{
+        width:20px;
+        height:40px;
+        
+    }
+    .sticky-dis .quantity .plus{
+        width:20px;
+        height:40px;
+        
+    }
+    .simg span{
+        margin-left: 50px;
+        font-size:1rem;
+    }
+    .simg img{
+        margin:10px;
+    }
+    .sticky-addcart{
+        margin:0;
+    }
+    .sticky-addcart button{
+    width:100px;
+    padding:5px;
+    margin-top: 25px;
+    }
+    .row{
+        justify-content: right;
+    }
+ }
